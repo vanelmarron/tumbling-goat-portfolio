@@ -1,0 +1,43 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  width: 100vw;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  max-width: 1216px;
+
+  @include tablet {
+    padding: 1.5rem 2rem;
+    position: relative;
+    z-index: 1000;
+  }
+
+  @include desktop {
+    margin: auto;
+  }
+
+  &__logo {
+    height: 3.5rem;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:hover, 
+    &:active {
+      font-weight: 700;
+      color: $jaffa;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  @include body-typo;
+
+  &__logo {
+    width: 5rem;
+    
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  &__instagram {
+    height: 20px;
+    cursor: pointer;
+  }
+}
